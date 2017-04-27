@@ -17,6 +17,29 @@
 		<h2 class="tzine"><a href="http://tutorialzine.com/2015/02/single-page-app-without-a-framework/">Back to article</a></h2>
 		<h1><a href="#">Single Page App Without A Framework</a></h1>
 	</header>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script>
+    // Initialize variables
+	var xhr = new XMLHttpRequest();
+	xhr.withCredentials = false;
+	xhr.open('GET', 'https://api.ona.io/api/v1/user', true);
+	xhr.setRequestHeader('Content-Type', 'application/json');
+	xhr.setRequestHeader('Authorization', '964969c3530a753e19097afd4da0e11f07dabb79');
+	xhr.send();
+    // Add CORS request
+    $.ajax({
+        method: "GET",
+		url: 'https://api.ona.io/api/v1/user',
+		dataType: 'json',
+		xhrFields: {
+			withCredentials: false
+		},
+		headers: {
+			'Authorization': '964969c3530a753e19097afd4da0e11f07dabb79'
+		},
+});
+        
+    </script>script>
 
 	<div class="main-content">
   
