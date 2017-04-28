@@ -17,21 +17,6 @@
 		<h2 class="tzine"><a href="http://tutorialzine.com/2015/02/single-page-app-without-a-framework/">Back to article</a></h2>
 		<h1><a href="#">Single Page App Without A Framework</a></h1>
 	</header>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-	<script>
-    // Add CORS request
-    $.ajax({
-        method: "GET",
-		url: 'https://api.ona.io/api/v1/user',
-		dataType: 'json',
-		xhrFields: {
-			withCredentials: false
-		},
-		headers: {
-			'Authorization': 'Token 964969c3530a753e19097afd4da0e11f07dabb79'
-		},
-});
-    </script>
 
 	<div class="main-content">
   
@@ -111,6 +96,9 @@
 				<h3>Single product view</h3>
 				<img src=""/>
 				<p></p>
+				<p id="price"></p>
+				<a href="" target="_blank">Buy it here</a> <!-- Open link in a new web page-->
+
 				<span class="close">×</span>
 			</div>
 
@@ -129,6 +117,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
 	<script src="assets/js/script.js"></script>
+
 
 
 </body>

@@ -255,6 +255,15 @@ $(function () {
 					container.find('h3').text(item.name);
 					container.find('img').attr('src', item.image.large);
 					container.find('p').text(item.description);
+					$.ajax({
+						method: "GET",
+						url: 'https://demo9070529.mockable.io/products/' +item.id, //Get the item information from the API
+						dataType: 'json',
+					}).done(function (data) { // Data fetched
+						container.find('#price').text(data.price + '$'); // referencing the price id 
+						container.find('a').attr('href',data.link) // referencing the pricing link
+					});
+
 				}
 			});
 		}
